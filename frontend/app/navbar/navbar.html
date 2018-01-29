@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <a class="navbar-brand" href="#" style="font-weight: bold;">GAME COLLECTION</a>
+
+    <div class="navbar-header" style="float: right;">      
+
+      <button
+        id="qsLoginBtn"
+        class="btn btn-primary btn-margin"
+        ng-if="!vm.auth.isAuthenticated()"
+        ng-click="vm.auth.login()">
+
+        <span class="glyphicon glyphicon-log-in"></span>
+          Log In
+      </button>
+
+      <button
+        id="qsLogoutBtn"
+        class="btn btn-primary btn-margin"
+        ng-if="vm.auth.isAuthenticated()"
+        ng-click="vm.auth.logout()">
+          Log Out
+      </button>
+
+    </div>
+  </div>
+</nav>
